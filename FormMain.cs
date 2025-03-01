@@ -12,5 +12,17 @@ namespace GetOracleData
             InitializeComponent();
             oraDB = new OracleDB();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (oraDB.Open())
+            {
+                MessageBox.Show("Database Open Success");
+            }
+            else
+            {
+                MessageBox.Show("Database Open Error");
+            }
+        }
     }
 }
